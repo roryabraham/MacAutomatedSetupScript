@@ -15,6 +15,8 @@ After completion, custom Terminal and iTerm themes will be downloaded to ~/Downl
 Follow the instructions [here](https://support.apple.com/guide/terminal/import-and-export-terminal-profiles-trml4299c696/mac) to add these themes to Terminal.
 Follow the instructions [here](https://iterm2colorschemes.com/) to add these themes to iTerm.
 
+When you open terminal/iterm, you will probably see some question mark icons. To fix this, go to preferences, click on the theme(s) you just imported and set the font to Fira Code Nerd Font (I also like to increase the font size to 12pt from the default 11pt).
+
 ## Details
 
 Here is a full list of everything this script downloads, installs, and/or configures:
