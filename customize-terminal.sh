@@ -18,7 +18,7 @@ write_to_shell_config 'alias python="python3"'
 
 # Bash-specific terminal customizations
 begin_configuration "bash-specific terminal customizations"
-echo $(cat ./.bash_profile_content) >> ~/.bash_profile
+echo $(cat ./static/.bash_profile_content) >> ~/.bash_profile
 
 # Download and install iTerm2
 begin_install "iTerm2"
@@ -75,7 +75,7 @@ ln -s "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt/spaceship.zsh-
 
 # Set spaceship theme in zsh
 prepend_file_with \
-    $(cat ./spaceship-prompt-custom.txt)
+    $(cat ./static/spaceship-prompt-custom.txt)
     '~/.zshrc'
 
 echo "\nSpaceship prompt good to go!\n"

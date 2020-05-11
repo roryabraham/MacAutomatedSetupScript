@@ -24,4 +24,4 @@ curl -fsSL \
     --output ~/.vim/colors/gruvbox.vim
 report_install_success "gruvbox vim theme"
 # Next, dump .vimrc
-echo $(cat ./.vimrc_content) >> ~/.vimrc
+echo $(cat ./static/.vimrc_content) >> ~/.vimrc

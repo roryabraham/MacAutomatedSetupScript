@@ -48,10 +48,10 @@ export PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/
 EOF
 
 # install vs-code extensions
-cat vscode-extensions.txt | xargs -L1 code --install-extension
+cat ./static/vscode-extensions.txt | xargs -L1 code --install-extension
 
 # configure vs-code custom settings
-cp ./vscode-custom-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+cp ./static/vscode-custom-settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 
 # Download and install JetBrains toolsuite
 begin_install "JetBrains Toolbox"

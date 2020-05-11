@@ -67,7 +67,7 @@ report_install_location "git" $(which git)
 
 # Configure global .gitignore
 begin_configuration "global .gitignore"
-cp ./.gitignore_global ~/.gitignore_global
+cp ./static/.gitignore_global ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 report_command_success \
     "Successfully configured global .gitignore!\n" \
