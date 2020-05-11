@@ -78,6 +78,10 @@ report_command_success "PyCharm"
 
 begin_deploy "DEVELOPER TOOLS"
 
+begin_install "MAMP"
+brew cask install mamp
+report_install_success "MAMP"
+
 begin_install "Postman"
 brew cask install postman
 report_install_success "Postman"
