@@ -17,6 +17,10 @@ Here is a full list of everything this script downloads, installs, and/or config
 - Essential Command Line Tools:
     - xcode-command-line-tools
     - Homebrew
+    - GNU coreutils
+    - gzip
+    - unzip
+    - wget
     - pkg-config
     - Git
     - Docker

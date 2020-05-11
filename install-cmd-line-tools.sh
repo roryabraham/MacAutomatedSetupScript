@@ -19,15 +19,36 @@ report_install_success "homebrew"
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# Tell bash and zsh to use Homebrew'd software instead of any default-installed
-write_to_shell_config 'export PATH="/usr/local/bin:$PATH"'
-
 # Verify Homebrew installation success
 echo "\nMaking sure Homebrew is up-to-date...\n"
 brew update
 brew doctor
 brew --version
 report_install_location "Homebrew" $(which brew)
+
+# Tell bash and zsh to use Homebrew'd software instead of any default-installed
+write_to_shell_config 'export PATH="/usr/local/bin:/usr/local/sbin:$PATH"'
+typeset -U PATH
+
+# Install GNU coreutils
+begin_install "GNU coreutils"
+brew install coreutils
+report_install_success "GNU coreutils"
+
+# Install gzip
+begin_install "gzip"
+brew intall gzip
+report_install_success "gzip"
+
+# Install unzip
+begin_install "unzip"
+brew install unzip
+report_install_success "unzip"
+
+# Install wget
+begin_install "wget"
+brew install wget
+report_install_success "wget"
 
 # Install pkg-config
 begin_install "pkg-config"

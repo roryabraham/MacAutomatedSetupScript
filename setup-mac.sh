@@ -141,4 +141,5 @@ report_install_success "Zoom"
 # ===============================
 
 begin_deploy "CLEANING UP"
-
+typeset -U PATH
+brew cleanup
