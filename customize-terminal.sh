@@ -106,41 +106,21 @@ echo "\nsource ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlightin
 echo "\n\nDownloading custom terminal & iTerm themes...\n"
 mkdir ~/Downloads/CustomTerminalThemes
 mkdir ~/Downloads/CustomiTermThemes
-# AtelierSulpherpool
-curl -fsSL \
-    https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/themes/AtelierSulphurpool.terminal \
-    --output ~/Downloads/CustomTerminalThemes/AtelierSulphurpool.terminal
-curl -fsSL \
-    https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/AtelierSulphurpool.itermcolors \
-    --output ~/Downloads/CustomiTermThemes/AtelierSulphurpool.itermcolors
-# Cobalt2
-curl -fsSL \
-    https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/themes/Cobalt2.terminal \
-    --output ~/Downloads/CustomTerminalThemes/Cobalt2.terminal
-curl -fsSL \
-    https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Cobalt2.itermcolors \
-    --output ~/Downloads/CustomiTermThemes/Cobalt2.itermcolors
-# MaterialDark
-curl -fsSL \
-    https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/themes/MaterialDark.terminal \
-    --output ~/Downloads/CustomTerminalThemes/MaterialDark.terminal
-curl -fsSL \
-    https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/MaterialDark.itermcolors \
-    --output ~/Downloads/CustomiTermThemes/MaterialDark.itermcolors
-# SeaShells
-curl -fsSL \
-    https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/themes/SeaShells.terminal \
-    --output ~/Downloads/CustomTerminalThemes/SeaShells.terminal
-curl -fsSL \
-    https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/SeaShells.itermcolors \
-    --output ~/Downloads/CustomiTermThemes/SeaShells.itermcolors
-# Spacedust
-curl -fsSL \
-    https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/themes/Spacedust.terminal \
-    --output ~/Downloads/CustomTerminalThemes/Spacedust.terminal
-curl -fsSL \
-    https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Spacedust.itermcolors \
-    --output ~/Downloads/CustomiTermThemes/Spacedust.itermcolors
+
+TERMINAL_THEMES_BASE_URL="https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/themes/"
+ITERM_THEMES_BASE_URL="https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes"
+custom_themes=("AtelierSulphurpool" "Cobalt2" "MaterialDark" "SeaShells" "Spacedust")
+
+for theme in "${custom_themes[@]}"
+do
+    TERMINAL_THEME_REMOTE_URL="${TERMINAL_THEMES_BASE_URL}${theme}.terminal"
+    TERMINAL_THEME_OUTPUT_URL="$HOME/Downloads/CustomTerminalThemes/${theme}.terminal"
+    curl "$TERMINAL_THEME_REMOTE_URL" > "$TERMINAL_THEME_OUTPUT_URL"
+
+    ITERM_THEME_REMOTE_URL="${ITERM_THEMES_BASE_URL}${theme}.itermcolors"
+    ITERM_THEME_OUTPUT_URL="$HOME/Downloads/CustomiTermThemes/${theme}.itermcolors"
+    curl "$ITERM_THEME_REMOTE_URL" > "$ITERM_THEME_OUTPUT_URL"
+done
 
 echo "\nCustom terminal & iTerm themes downloaded. Don't forget to manually set them in-app!\n\n"
 

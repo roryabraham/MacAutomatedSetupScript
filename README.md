@@ -7,8 +7,13 @@ This is a script for setting up a new Mac for developers.
 Clone or download this repo as a .zip file. Unzip it and run this command from the folder containing all these files:
 
 ```bash
-./setup-mac.sh
+sudo ./setup-mac.sh
 ```
+
+After completion, custom Terminal and iTerm themes will be downloaded to ~/Downloads/CustomTerminalThemes and ~/Downloads/CustomiTermThemes, respectively.
+
+Follow the instructions [here](https://support.apple.com/guide/terminal/import-and-export-terminal-profiles-trml4299c696/mac) to add these themes to Terminal.
+Follow the instructions [here](https://iterm2colorschemes.com/) to add these themes to iTerm.
 
 ## Details
 
