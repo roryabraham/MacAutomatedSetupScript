@@ -82,6 +82,14 @@ begin_install "MAMP"
 brew cask install mamp
 report_install_success "MAMP"
 
+begin_install "PhpMyAdmin"
+brew cask install phpmyadmin
+report_install_success "PhpMyAdmin"
+
+begin_install "PgAdmin4"
+brew cask install pgadmin4
+report_install_success "PgAdmin4"
+
 begin_install "Postman"
 brew cask install postman
 report_install_success "Postman"

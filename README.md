@@ -47,6 +47,9 @@ Here is a full list of everything this script downloads, installs, and/or config
     - WebStorm
     - PhpStorm
 - Developer Tools
+    - MAMP
+    - PhpMyAdmin
+    - PgAdmin
     - Postman
     - Wireshark
 - Web Browsers
