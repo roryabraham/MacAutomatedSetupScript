@@ -1,0 +1,42 @@
+{
+    "C_Cpp.updateChannel": "Insiders",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "window.zoomLevel": 0,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.autoSave": "afterDelay",
+    "python.jediEnabled": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/Users/rory/.vscode/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+    "java.semanticHighlighting.enabled": true,
+    "markdownlint.config": {
+        "default": true,
+        "code-block-style": {
+            "style": "fenced"
+        },
+        "ul-indent": {
+            "indent": 4
+        }
+    },
+    "workbench.colorTheme": "Atlantic Night",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#FEDA006A"
+    },
+    "editor.fontFamily": "FiraCode-Retina, FiraCode Nerd Font Retina, FiraCode Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.tokenColorCustomizations": {
+        "comments": "#EE8800"
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "[Atlantic Night]": {
+            "enabled": true
+        }
+    },
+    "editor.semanticHighlighting.enabled": true,
+    "workbench.iconTheme": "helium-icon-theme"
+}

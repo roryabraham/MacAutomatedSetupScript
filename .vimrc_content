@@ -1,0 +1,48 @@
+execute pathogen#infect()
+
+syntax on
+
+filetype plugin indent on
+
+set background=dark
+colorscheme gruvbox
+
+if &term =~'256color'
+	set t_ut=
+endif
+
+
+" Turn on display line numbers
+set number
+
+set tabstop=4
+
+set smartindent
+set shiftwidth=4
+
+set textwidth=78
+
+highlight comment ctermfg=lightblue
+
+ " Use 4 spaces in place of a tab character for python file
+ au BufRead,BufNewFile *.py,*pyw,*.py3 set shiftwidth=4
+ au BufRead,BufNewFile *.py,*.pyw,*.py3 set expandtab
+ 
+ " set status line info for lint checker
+ set statusline+=%#warningmsg#
+ set statusline+=%{SyntasticStatuslineFlag()}
+ set statusline+=%*
+ 
+ " set options for lint checker
+ let g:syntastic_always_populate_loc_list = 1
+ let g:syntastic_auto_loc_list = 1
+ let g:syntastic_check_on_open = 1
+ let g:syntastic_check_on_wq = 0
+
+" set status bar (airline) theme to something pretty
+ let g:airline_theme='jellybeans'
+
+" autoclose brackets and parentheses
+:inoremap ( ()<Esc>i
+:inoremap { {}<Esc>i
+:inoremap [ []<Esc>i
