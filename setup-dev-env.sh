@@ -54,6 +54,11 @@ report_install_success "Java 14"
 # Set java_home to be Java 14 in bash and zsh
 write_to_shell_config "export JAVA_HOME='/usr/libexec/java_home -v14'"
 
+# Install maven
+begin_install "Maven"
+HOMEBREW_NO_AUTO_UPDATE=1 brew install maven
+report_install_success "maven"
+
 # Install Homebrew latest version of gcc and g++
 begin_install "GCC and G++"
 HOMEBREW_NO_AUTO_UPDATE=1 brew install gcc

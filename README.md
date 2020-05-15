@@ -36,7 +36,7 @@ Here is a full list of everything this script downloads, installs, and/or config
 - Developer environment, Tools, and Languages
     - Python3, pip, virtualenv
     - NumPy, Pandas, SciKit, Matplotlib
-    - Java 8 and Java 14
+    - Java 8 and Java 14, plus Maven
     - PHP7 and composer
     - Newer versions of GCC/G++ than ship with MacOS
     - AWS CLI
